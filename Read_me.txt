@@ -4,6 +4,15 @@ git init
 
 git commit
 
+git branch <branchname> ()
+ + git checkout <branchname> 
+or
+git checkout -b <branchname>
+
+git merge <branchname>
+
+git rebase <branchname>
+
 git status
 
 git config --global
