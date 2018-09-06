@@ -35,9 +35,20 @@ git rebase -i / --interactive <branchname>(from the HEAD to the branch) / HEAD^ 
 
 
 
+git clone <url>
+
+git fetch
+
+git pull
+
+
+
+
 git status
 
-git config --global
+git config --global user.name <yourname>
+
+git config --global user.email <youremail>
 
 git diff
 
