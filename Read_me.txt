@@ -39,7 +39,22 @@ git clone <url>
 
 git fetch
 
-git pull
+git pull = (the up-to-date branch is local master) git fetch + git merge <remote>
+
+git push (related to the push.default setting, make sure to check this setting before pushing the project)
+
+
+*make your work base on the up-to-date remote repository which has already been updated.
+*As the up-to-date remote repository is different from the local modified repository.
+
+git pull; git push
+or git fetch; git merge <remote>; git push
+(The remote and the local are totally the same and they have all version items of the project)
+
+git pull --rebase; git push
+or git fetch; git rebase <remote>; git push
+(The remote and the local are different. The remote just gets the rebased version items and the local remains the modified items which have not been rebased)
+
 
 
 
