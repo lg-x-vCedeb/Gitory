@@ -31,9 +31,9 @@ git revert HEAD / <branchname> (the HEAD point to the reverted repository)
 
 git cherry-pick <hash 1 > <hash 2 > <hash 3 > <hash 4 > ... <hash n > / <branchname> (generate the new historial branch: father of all the picked hash or brach <- hash1 <- hash2 <- hash3 <- ... <- hashn / branchname)
 
-git rebase -i / --interactive <branchname>(from the HEAD to the branch) / HEAD^ / HEAD~<num>
+git rebase -i / --interactive <branchname>(from the HEAD to the branch) / HEAD^ / HEAD~<num> (release a UI window which can change the order of the parameters. The UI )
 
-
+git commit --amend 
 
 git clone <url>
 
