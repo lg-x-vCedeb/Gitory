@@ -23,9 +23,14 @@ git checkout HEAD^ / HEAD~<num>
 
 git branch -f <branchname> <hash> / HEAD^ / HEAD~<num>
 
-git reset HEAD^ / HEAD~<num> / <branchname> / <hash>
+git reset HEAD^ / HEAD~<num> / <branchname> / <hash> (to the local repository)
 
-git revert HEAD / <branchname> (the HEAD point to the reverted repository)
+git revert HEAD / <branchname> (the HEAD point to the reverted repository)(in order to reverse changes and share those reversed change with others)
+
+git tag <tag> <hash> / <branchname>
+
+git describe <ref> (<hash> / <branchname> etc..)
+- output: echo <tag>_<numCommits>_g<hash> (<tag> is the closest ancestor tag in history and <numCommits> is how many commits away that tag is)
 
 
 
