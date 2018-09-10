@@ -11,7 +11,7 @@ git checkout -b <branchname>
 
 git merge <branchname>
 
-git rebase <branchname>
+git rebase <branchname> (Rebasing essentially takes a set of commits, "copies" them, and plops them down somewhere else.)
 
 HEAD:
 
@@ -37,6 +37,11 @@ git describe <ref> (<hash> / <branchname> etc..)
 git cherry-pick <hash 1 > <hash 2 > <hash 3 > <hash 4 > ... <hash n > / <branchname> (generate the new historial branch: father of all the picked hash or brach <- hash1 <- hash2 <- hash3 <- ... <- hashn / branchname)
 
 git rebase -i / --interactive <branchname>(from the HEAD to the branch) / HEAD^ / HEAD~<num> (release a UI window which can change the order of the parameters. The UI )
+	*git rebase / git rebase -i <ref1> <ref2> (the usage of this is to be described with the illustration of its function: 
+						  	- Rebasing essentially takes a set of commits[From the next commit of the origin commit to the <ref2>], "copies" them, and plops them down somewhere[<ref1>] else.)
+
+
+
 
 git commit --amend 
 
