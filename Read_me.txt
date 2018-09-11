@@ -32,6 +32,12 @@ git tag <tag> <hash> / <branchname>
 git describe <ref> (<hash> / <branchname> etc..)
 - output: echo <tag>_<numCommits>_g<hash> (<tag> is the closest ancestor tag in history and <numCommits> is how many commits away that tag is)
 
+about the operator ^ / ~ :
+	 ~ <num>: point to the <num> previous commit
+	 ^ <num>: point to the <num> father commit
+
+	 they can be used in the string form.
+
 
 
 git cherry-pick <hash 1 > <hash 2 > <hash 3 > <hash 4 > ... <hash n > / <branchname> (generate the new historial branch: father of all the picked hash or brach <- hash1 <- hash2 <- hash3 <- ... <- hashn / branchname)
