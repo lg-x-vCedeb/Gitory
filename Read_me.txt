@@ -54,18 +54,20 @@ git rebase -i / --interactive <branchname>(from the HEAD to the branch) / HEAD^ 
 
 
 
+Remote Repository:
+
 git commit --amend 
 
 git clone <url>
 
 git fetch
 
-git pull = (the up-to-date branch is local master) git fetch + git merge <remote>
+git pull = (the current branch) git fetch + git merge <remote> (The remote commits are fetched to the local remote branch (e.g. origin/master) and then merged into the current branch which the HEAD points to)
 
 git push (related to the push.default setting, make sure to check this setting before pushing the project)
 
 
-*make your work base on the up-to-date remote repository which has already been updated.
+*make your work base on the current remote repository which has already been updated.
 *As the up-to-date remote repository is different from the local modified repository.
 
 git pull; git push
@@ -77,7 +79,18 @@ or git fetch; git rebase <remote>; git push
 (The remote and the local are different. The remote just gets the rebased version items and the local remains the modified items which have not been rebased)
 
 
-
+remote-tracking branches:
+	
+	"During a clone, git creates a remote branch for every branch on the remote (like 'origin/master'). It then creates a local branch that tracks the currently active branch on the remote, which is 'master' in most cases. (default case)."
+	
+	It explains why the following command output as cloning: 
+		- 'local branch "master" set to track remote branch "origin/master"'
+		(The connection between "master" and "origin/master" is explained simply by the "remote tracking" property of branches.)
+	
+	Which can be set with two methods:
+		1. "git checkout -b <theBranchtoTrackRemote> <remote>" e.g "git checkout -b totallyNotMaster origin/master"
+		2. "git branch -u <remote> <theBranchtoTrackRemote>" e.g. "git branch -u origin/master totallyNotMaster"
+	The difference of them is that "checkout" command can create a new branch as "<theBranchtoTrackRemote>"not existing.
 
 
 git status
@@ -106,3 +119,8 @@ wq : save and quit
 yy (yank): copy the whole characters line
 p (paster): paster what we just copy
 d : delete the whole characters line
+
+REMARK: 
+	Some sentences are quoted from 
+	- "Learning Git Branching" https://learngitbranching.js.org
+	- "learnGitBranching" https://github.com/prottle/learnGitBranching
