@@ -55,16 +55,27 @@ git rebase -i / --interactive <branchname>(from the HEAD to the branch) / HEAD^ 
 
 
 Remote Repository:
+* the <remote> is 'origin' in most cases.
 
 git commit --amend 
 
 git clone <url>
 
-git fetch
+git fetch 
+	- argument mode: 
+		* git fetch <remote> <source>
+		* git fetch <remote> <source>:<destination>
+		(<source> can be the string-code denoting the specific <ref>; if the <destination> isn't exist, the command would create a new <destination>)
 
 git pull = (the current branch) git fetch + git merge <remote> (The remote commits are fetched to the local remote branch (e.g. origin/master) and then merged into the current branch which the HEAD points to)
+	
 
 git push (related to the push.default setting, make sure to check this setting before pushing the project)
+	- argument mode:
+                * git push <remote> <place>
+                  Example: git push origin master
+                        which means that "Go to the branch named 'master' in the repository, grab all the commits, and then go to the branch 'master' on the remote named 'origin'. Place whatever commits are missing on that branch and then tell me when you're done."
+                * git push <remote> <source>:<destination> (Some facts are as above mentioned.)
 
 
 *make your work base on the current remote repository which has already been updated.
