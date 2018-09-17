@@ -1,24 +1,25 @@
-#The Note of Learning Git
-##Git Bash
+# The Note of Learning Git
+## Git Bash
+	git init
 
->git init
+	git commit
 
->git commit
+`git branch <branchname>` ()
+\+ `git checkout <branchname>` 
 
->git branch <branchname> () \+ git checkout <branchname>
-or
->git checkout -b <branchname>
+or `git checkout -b <branchname>`
 
->git merge <branchname>
+	git merge <branchname>
 
->git rebase <branchname> 
+	git rebase <branchname> 
+
 Rebasing essentially takes a set of commits, "copies" them, and plops them down somewhere else.
 
-###HEAD
+### HEAD
 
-git checkout <hash>
+	git checkout <hash>
 
-git log (to check the hash of the data)
+`git log` (to check the hash of the data)
 
 git checkout HEAD^ / HEAD~<num>
 
