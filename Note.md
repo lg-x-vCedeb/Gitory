@@ -152,4 +152,3 @@ The difference of them is that "checkout" command can create a new branch as `<t
 ### REMARK: 
 Some sentences are quoted from:
   - [Learning Git Branching](https://learngitbranching.js.org "Learning Git Branching")
-  - [learnGitBranching](https://github.com/prottle/learnGitBranching "learnGitBranching")
