@@ -121,7 +121,10 @@ The difference of them is that "checkout" command can create a new branch as `<t
 
     git config --global user.email <youremail>
 
-    git diff
+    git diff //(TBD)
+    
+    ssh-keygen -t rsa -C "youremail@example.com" 
+    //(Login your Github account in different devices e.g. Public PC in School, Company etc)
 
 ### Editing
     touch + [filename] : create new file.
